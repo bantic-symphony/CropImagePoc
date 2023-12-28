@@ -14,6 +14,9 @@ class CropActivityContract: ActivityResultContract<Intent, Uri?>() {
     override fun parseResult(resultCode: Int, intent: Intent?): Uri? {
         Log.w("BOJAN", "CropActivityContract.parseResult resultCode: $resultCode")
         if (resultCode == Activity.RESULT_OK){
+            intent?.getStringExtra("EXTRA_KEY")?.let {
+                Log.w("BOJAN", "More data from intent: $it")
+            }
             intent?.getStringExtra("uri_key")?.let {
                 Log.w("BOJAN", "CropActivityContract.parseResult: $it")
                 return it.toUri()

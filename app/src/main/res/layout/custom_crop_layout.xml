@@ -11,26 +11,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="true"
+        android:background="@drawable/button_background"
         android:text="save"
+        android:textColor="@color/Black"
         android:layout_margin="8dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cropImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <TextView
         android:id="@+id/flip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="flip"
-        android:layout_margin="8dp"
+        android:text="Custom Crop"
+        android:textSize="24sp"
+        android:textFontWeight="800"
+        android:textColor="@color/Black"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="16dp"
         android:textAllCaps="true"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <com.canhub.cropper.CropImageView
         android:id="@+id/cropImageView"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:paddingHorizontal="8dp"
+        android:paddingHorizontal="2dp"
         app:cropShape="oval"
         app:cropFixAspectRatio="true"
         app:cropBackgroundColor="@color/DimGray"
